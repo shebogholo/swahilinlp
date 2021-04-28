@@ -36,7 +36,8 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
+[metadata]
+description-file = README.md
 # Unit test / coverage reports
 htmlcov/
 tests/

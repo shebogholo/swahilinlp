@@ -11,6 +11,7 @@ class SwahiliNLP(object):
     def get_headers():
         return {"Content-Type": "application/json"}
 
+    # NER
     def ner(self, sentence, json: bool = True):
         try:
             response = self._get_ner_response(sentence=sentence)

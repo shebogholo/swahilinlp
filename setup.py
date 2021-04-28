@@ -13,4 +13,5 @@ setup(
     install_requires=[
         'requests'
     ],
+    keywords = ['Swahili', 'Tanzania']
 )

@@ -6,6 +6,8 @@ import requests
 class SwahiliNLP(object):
     def __init__(self):
         self.NER_URL = "https://bellbot.tech/api/v1/ner-swahili"
+        self.SENTIMENT_URL = "https://bellbot.tech:81/analyse"
+        self.LANGID_URL = "https://bellbot.tech:124/v1/langid"
 
     @staticmethod
     def get_headers():
@@ -14,15 +16,30 @@ class SwahiliNLP(object):
     # NER
     def ner(self, sentence, json: bool = True):
         try:
-            response = self._get_ner_response(sentence=sentence)
+            response = self._get_response(url=self.NER_URL, sentence=sentence)
             return response
         except:
             return None
 
-    def _get_ner_response(self, sentence):
+    def sentiment(self, sentence, json: bool = True):
+        try:
+            response = self._get_response(url=self.SENTIMENT_URL, sentence=sentence)
+            return response
+        except:
+            return None
+    
+    # African Languages Identification
+    def langid(self, sentence, json: bool = True):
+        try:
+            response = self._get_response(url=self.LANGID_URL, sentence=sentence)
+            return response
+        except:
+            return None
+
+    def _get_response(self, url, sentence):
         try:
             response = requests.get(
-                self.NER_URL, json={"text": sentence}, headers=self.get_headers()
+                url, json={"text": sentence}, headers=self.get_headers()
             ).json()
             return response
         except (requests.ConnectionError, requests.ConnectTimeout):

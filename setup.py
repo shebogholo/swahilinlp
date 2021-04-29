@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='swahilinlp',
-    version='0.1.0',
+    version='0.1.1',
     description='Swahili Natural Language Processing (NLP) Library',
     url="https://github.com/shebogholo/swahilinlp",
     author='Waziri Shebogholo',

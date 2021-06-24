@@ -5,9 +5,9 @@ import requests
 
 class SwahiliNLP(object):
     def __init__(self):
-        self.NER_URL = "https://bellbot.tech/api/v1/ner-swahili"
-        self.SENTIMENT_URL = "https://bellbot.tech:81/analyse"
-        self.LANGID_URL = "https://bellbot.tech:124/v1/langid"
+        self.NER_URL = "https://belltro.xyz/api/v1/ner-swahili"
+        self.SENTIMENT_URL = "https://belltro.xyz:81/analyse"
+        self.LANGID_URL = "https://belltro.xyz:124/v1/langid"
 
     @staticmethod
     def get_headers():

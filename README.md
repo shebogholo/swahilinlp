@@ -12,6 +12,7 @@
     langid('hii ni lugha nzuri afrika')
 ```
 
+
 ```json
     {
         'lang': 'Swahili'
@@ -23,6 +24,7 @@
     from swahilinlp import ner
     ner('Mimi ni Waziri Shebogholo, natokea Tanga.')
 ```
+
 
 ```json
     [
@@ -48,6 +50,7 @@
     from swahilinlp import sentiment    
     sentiment('Leo simba wamecheza mpira mzuri sana, pira biriani')
 ```
+
 
 ```json
     {
